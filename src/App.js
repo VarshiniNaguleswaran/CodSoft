@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 
 function App() {
   return (
-    //<HomePage></HomePage>
   <Router>
       <div>
         <Routes>

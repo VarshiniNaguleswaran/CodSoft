@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { ScrollRestoration, useNavigate } from 'react-router-dom';
 
 function Project() {
   
@@ -20,11 +20,13 @@ function Project() {
       };
     
   return (
-    <div>
-        <h1>project showcase</h1>
+    <div className='ProjectContainer'>
+        <h1 className='Project-head'>Projects</h1>
+        
         <div class="container">
-        <div class="box box1">
-          <h1>Child growth Indicator</h1>
+          <div className='projectDiv'>
+          <div class="box1">
+          <h2>Child growth Indicator</h2>
           <p>It is a web application that show the baby's health recode</p>
           <br></br>
           <p>we are normaly keep harcopy so we create the softcopy</p>
@@ -35,8 +37,8 @@ function Project() {
           <p>Database : MySql</p>
         </div>
 
-        <div class="box box2">
-          <h1>Image based Search App</h1>
+        <div class="box2">
+          <h2>Image based Search App</h2>
             <p>It is a web application that we can search related images</p>
             <br></br>
             <h4>Languages </h4>
@@ -44,23 +46,13 @@ function Project() {
             <p>Frontend : reactJs</p>
             <p>Api : Tineye</p>
         </div>
-        <div class="box box3"></div>
+          </div>
     </div>
 
-        <div className='gallery'>
-
-            <div className='div1'>
-                
-            </div>
-
-            <div className='div1'>
-            
-            </div>
-            <div className='div1'>hai</div>
-          </div>
+        
           <footer className="homepage-footer">
         <div className="homepage-links">
-          <a href="#" className="homepage-link" onClick={handleHome}>HomePage</a>
+          <a href="#" className="homepage-link" onClick={handleHome}>Home</a>
           <a href="#" className="homepage-link" onClick={handleProject}>Projects</a>
           <a href="#" className="homepage-link" onClick={handleAboutme}>About me</a>
           <a href="#" className="homepage-link" onClick={handleContact}>Contact me</a>
@@ -68,6 +60,7 @@ function Project() {
       </footer>
      </div>
     
+   
   );
 }
 

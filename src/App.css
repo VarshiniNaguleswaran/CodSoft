@@ -32,7 +32,11 @@
 {
   margin-top: 60px;
 }
-
+.intro-img
+{
+  background-image: url('./components/introImg.jpg');
+  z-index: 2;
+}
 .homepage-footer {
   background-color: rgba(240, 248, 255, 0.8); 
   padding: 10px;
@@ -100,4 +104,122 @@ color: #f5f5f5;
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+
+.about-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #003366;
+  color: white;
+}
+
+.aboutme-body {
+  width: 100%;
+}
+
+.about-me-container h1,
+.about-me-container h3 {
+  color: white;
+}
+.html {
+  background-image: url('./components/html.svg');
+}
+
+.css{
+  background-image: url('./components/css.svg');
+}
+.python{
+  background-image: url('./components/python.svg');
+}
+.java{
+  background-image: url('./components/java.svg');
+}
+.js{
+  background-image: url('./components/nodejs.svg');
+}
+.react{ 
+  background-image: url('./components/react.svg');
+}
+.mysql{
+  background-image: url('./components/mysql.svg');
+}
+.mongodb{
+  background-image: url('./components/mongodb.svg');
+}
+.skillimg1,
+.skillimg2
+{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.skills
+{
+  
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+.html,.css,.java,.python,.java,.js,.react,.mysql,.mongodb
+{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.html:hover,.css:hover, .java:hover, .python:hover, .js:hover, .react:hover, .mysql:hover, .mongodb:hover {
+  background-color: #ddd;
+  transform: scale(1.3);
+}
+
+/*........................*/
+.ProjectContainer
+{
+  background-image: url('./components/background.jpeg');
+  height: 900px;
+}
+.projectDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 150px;
+}
+
+.box1, .box2 {
+  background-color: rgba(14, 87, 160, 0.7); /* 50% opacity */
+
+
+  color: white;
+  border-radius: 10px;
+  height: 450px;
+  width: 300px; 
+  padding: 20px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.box1:hover, .box2:hover {
+  background-color: white;
+  color: #003366;
+}
+
+.Project-head {
+  background-color: #003366;
+  color: white;
+  font-size: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px; 
 }

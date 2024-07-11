@@ -21,27 +21,45 @@ function AboutMe() {
     
 
   return (
-    <div>
-        
-        <h1>Aboutme</h1>
-        <p>
-            Hai!<br></br>
-            This is varshini Naguleswaran Hello! an enthusiastic IT undergraduate passionate about exploring new things and pushing the boundaries of technology. My journey in the world of Information Technology has been an exciting adventure of learning, discovery, and innovation.
-        </p>
-        <h4>Professional Background</h4>
-        <p>
+
+      <div className="about-me-container">
+        <div className='aboutme-body'>
+        <h1>About Me</h1>
+      <p>
+        Hello! I'm Varshini Naguleswaran, an enthusiastic IT undergraduate passionate about exploring new things and pushing the boundaries of technology. My journey in the world of Information Technology has been an exciting adventure of learning, discovery, and innovation.
+      </p>
+      <br></br>
+      <h3>Professional Background</h3><br></br>
+      <p>
         As an IT student, I've immersed myself in various aspects of technology, from software development and network security to data analysis and artificial intelligence. My academic experiences have equipped me with a solid foundation in computer science principles and practical skills in programming languages like Python, Java, and C++.
-        </p>
-        <h4>Skills and Expertise</h4>
-        <ol>
-            <li>Programming Languages: Python, Java, C++,</li>
-            <li>Web Development: HTML, CSS, JavaScript, React</li>
-            <li>Mobile App Development : React-native</li>
-            <li>Database Management: SQL, MongoDB</li>
-        </ol>
+      </p>
+      <br></br>
+      <h3>Skills and Expertise</h3>
+
+      <div className='skills'>
+        <div className='skillimg1'>
+          <div className='html'></div>
+          <div className='css'></div>
+          <div className='python'></div>
+          <div className='java'></div>
+        </div>
+        <div className='skillimg2'>
+        <div className='js'></div>
+        <div className='react'></div>
+        <div className='mysql'></div>
+        <div className='mongodb'></div>
+        </div>
+        
+      </div>
+
+      <br></br>
+        </div>
+      
+
+
         <footer className="homepage-footer">
         <div className="homepage-links">
-          <a href="#" className="homepage-link" onClick={handleHome}>HomePage</a>
+          <a href="#" className="homepage-link" onClick={handleHome}>Home</a>
           <a href="#" className="homepage-link" onClick={handleProject}>Projects</a>
           <a href="#" className="homepage-link" onClick={handleAboutme}>About me</a>
           <a href="#" className="homepage-link" onClick={handleContact}>Contact me</a>

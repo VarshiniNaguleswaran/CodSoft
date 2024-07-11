@@ -39,7 +39,7 @@ function ContactForm() {
         
         <footer className="homepage-footer">
         <div className="homepage-links">
-          <a href="#" className="homepage-link" onClick={handleHome}>HomePage</a>
+          <a href="#" className="homepage-link" onClick={handleHome}>Home</a>
           <a href="#" className="homepage-link" onClick={handleProject}>Projects</a>
           <a href="#" className="homepage-link" onClick={handleAboutme}>About me</a>
           <a href="#" className="homepage-link" onClick={handleContact}>Contact me</a>
