@@ -1,0 +1,246 @@
+.homebody
+{
+  background-color: black;
+  height: 2000px;
+}
+.homeIntro
+{
+  display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Example height for demonstration */
+}
+.homeIntro-home
+{
+  background-image: url('./components/homeintro.avif');
+  height: 500px;
+  width: 800px;
+  background-size: cover;
+  
+}
+.homeIntro-black
+{
+  color: white;
+  height: 500px;
+  width: 800px;
+}
+.homeIntroh1
+{
+  font-style: italic;
+  font-size: 100px;
+}
+.homeIntroPara
+{
+  font-size: 20px;
+}
+.navbar {
+  background-color: black;
+  padding: 1rem; 
+  display: flex;
+  justify-content:center;
+  margin-right: 10px;
+  gap: 1rem; 
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Stick to the top of the viewport */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  position: relative; /* Ensure pseudo-elements position relative to .navItem */
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden; /* Hide overflow for pseudo-elements */
+}
+
+.navItem::before,
+.navItem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start from the center */
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.5s ease; /* Slow transition for width */
+}
+
+.navItem::before {
+  transform: translateX(-50%);
+}
+
+.navItem::after {
+  transform: translateX(50%);
+}
+
+.navItem:hover::before,
+.navItem:hover::after {
+  width: 80%; 
+}
+.blogImages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.blogRow {
+  display: flex;
+  gap: 10px;
+}
+
+.blog1, .blog2, .blog3, .blog4, .blog5, .blog6 {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog1:hover, .blog2:hover, .blog3:hover, .blog4:hover, .blog5:hover, .blog6:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog1 {
+  background-image: url('./components/img1.webp');
+}
+
+.blog2 {
+  background-image: url('./components/img2.webp');
+}
+
+.blog3 {
+  background-image: url('./components/img3.jpeg');
+}
+
+.blog4 {
+  background-image: url('./components/img4.jpeg');
+}
+
+.blog5 {
+  background-image: url('./components/img5.webp');
+}
+
+.blog6 {
+  background-image: url('./components/img6.jpg');
+}
+/*Login form*/
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./components/loginBack.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.loginForm {
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+.loginForm h1 {
+  margin-bottom: 20px;
+}
+
+.loginForm label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.loginForm input[type="text"], .loginForm input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.loginForm input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: violet;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loginForm input[type="submit"]:hover {
+  background-color: darkviolet;
+}
+/*Sigin*/
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./components/loginBack.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.registerForm {
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+.registerForm h1 {
+  margin-bottom: 20px;
+}
+
+.registerForm label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.registerForm input[type="text"], .registerForm input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.registerForm input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: violet;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registerForm input[type="submit"]:hover {
+  background-color: darkviolet;
+}
