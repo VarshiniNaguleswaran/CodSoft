@@ -126,9 +126,7 @@ export default function UserDashboard({ currentUser }) {
                     <div className="blog3">
                         <button className="edit-button" onClick={handleEditPage}>Edit</button>
                         <button className="delete-button">Delete</button> 
-                    </div>
-
-                    
+                    </div>    
                 </div>
           <div className="plus" onClick={handleCreateBlog}></div>
         </div>
