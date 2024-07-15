@@ -6,9 +6,9 @@
 .homeIntro
 {
   display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    height: 100vh; /* Example height for demonstration */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
 }
 .homeIntro-home
 {
@@ -40,46 +40,75 @@
   justify-content:center;
   margin-right: 10px;
   gap: 1rem; 
-  position: fixed; /* Fixed positioning */
-  top: 0; /* Stick to the top of the viewport */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it's above other content */
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+  z-index: 1000; 
 }
 
 .navItem {
   color: white;
   text-decoration: none;
-  position: relative; /* Ensure pseudo-elements position relative to .navItem */
+  position: relative; 
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow: hidden; /* Hide overflow for pseudo-elements */
+  overflow: hidden; 
 }
 
 .navItem::before,
-.navItem::after {
+.navItem::after,
+.logout::before,
+.logout::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%; /* Start from the center */
+  left: 50%; 
   width: 0;
   height: 1px;
   background-color: white;
-  transition: width 0.5s ease; /* Slow transition for width */
+  transition: width 0.5s ease; 
 }
 
-.navItem::before {
+.navItem::before,
+.logout::before {
   transform: translateX(-50%);
 }
 
-.navItem::after {
+.navItem::after,
+.logout::after {
   transform: translateX(50%);
 }
 
 .navItem:hover::before,
-.navItem:hover::after {
+.navItem:hover::after,
+.logout:hover::before,
+.logout:hover::after {
   width: 80%; 
 }
+.navbar1 {
+  background-color: black;
+  padding: 1rem; 
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem; 
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+  z-index: 1000; 
+}
+.logout
+{
+  color: white;
+  text-decoration: none;
+  position: relative; 
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden; 
+}
+
+
 .blogImages {
   display: flex;
   flex-direction: column;
@@ -92,7 +121,7 @@
   gap: 10px;
 }
 
-.blog1, .blog2, .blog3, .blog4, .blog5, .blog6 {
+.blog1, .blog2, .blog3, .blog4, .blog5, .blog6,.plus{
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -102,7 +131,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.blog1:hover, .blog2:hover, .blog3:hover, .blog4:hover, .blog5:hover, .blog6:hover {
+.blog1:hover, .blog2:hover, .blog3:hover, .blog4:hover, .blog5:hover, .blog6:hover,.plus:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -162,8 +191,17 @@
   margin-bottom: 10px;
   text-align: left;
 }
+.loginForm input[type="password"]
+{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
 
-.loginForm input[type="text"], .loginForm input[type="password"] {
+.loginForm input[type="text"]  {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -243,4 +281,133 @@
 
 .registerForm input[type="submit"]:hover {
   background-color: darkviolet;
+}
+
+/*userdashboard*/
+.userdashboard-container
+{
+  background: linear-gradient(135deg, rgb(167, 170, 133), #fdfdff, #3f013d);
+}
+.plus
+{
+  background-color: white;
+  background-image: url('./components/plus.png');
+}
+
+.edit-button {
+  background-color: rgba(189, 16, 172, 0.8);
+  position: absolute;
+  left: 20px; /* Position on the left side */
+  bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white; 
+}
+
+.delete-button {
+  background-color: rgba(208, 26, 26, 0.8);
+  position: absolute;
+  right: 20px; /* Position on the right side */
+  bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white; 
+}
+
+.userNameIntro
+{
+  font-size: 45px;
+}
+.userNameIntro:hover
+{
+  transition: color 0.5s;
+  color: purple;
+}
+
+
+/*create Blog */
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 1200px;
+  margin-top: 100px;
+}
+
+h2 {
+  text-align: center;
+  color: purple;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type='text']{
+  height: 20px;
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+textarea {
+  
+  width: 800px;
+  height: 1000px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 400px; 
+  width: 100%; 
+  resize: vertical;
+}
+
+input[type='submit'] {
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  width: 150px;
+  transition: background-color 0.3s ease;
+}
+
+input[type='submit']:hover {
+  background-color: #1a4a4a;
+}
+.backButton {
+  background-image: url('./components/backbutton.png');
+  width: 50px;
+  height: 50px;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
 }
